@@ -14,7 +14,7 @@ export const METERS: MeterConfig[] = [
   {
     id: 'electric',
     unit: 'kWh',
-    defaultTariff: 450,
+    defaultTariff: 650,
     accent: '#e8a317',
     accentSoft: 'rgba(232, 163, 23, 0.18)',
     digits: 6,
@@ -23,7 +23,7 @@ export const METERS: MeterConfig[] = [
   {
     id: 'gas',
     unit: 'm³',
-    defaultTariff: 650,
+    defaultTariff: 1100,
     accent: '#2d8a6e',
     accentSoft: 'rgba(45, 138, 110, 0.18)',
     digits: 6,
@@ -31,7 +31,7 @@ export const METERS: MeterConfig[] = [
   {
     id: 'water',
     unit: 'm³',
-    defaultTariff: 1800,
+    defaultTariff: 3800,
     accent: '#2a6f9e',
     accentSoft: 'rgba(42, 111, 158, 0.18)',
     digits: 6,
