@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Orbitron:wght@600;700&family=Syne:wght@600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-lcd: "Orbitron", "Courier New", monospace;
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-panel: var(--panel);
+  --color-line: var(--line);
+  --color-input: var(--input);
+  --color-footer: var(--footer);
+  --color-footer-text: var(--footer-text);
+  --color-electric: #e8a317;
+  --color-gas: #2d8a6e;
+  --color-water: #2a6f9e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+/* —— Light (default) —— */
+:root,
+[data-theme="light"] {
+  --ink: #1a1f24;
+  --muted: rgba(26, 31, 36, 0.55);
+  --panel: rgba(244, 247, 249, 0.88);
+  --line: #b8c4cc;
+  --input: #ffffff;
+  --footer: #1a1f24;
+  --footer-text: #ffffff;
+  --page-bg:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(232, 163, 23, 0.18), transparent 50%),
+    radial-gradient(ellipse 70% 45% at 90% 0%, rgba(42, 111, 158, 0.16), transparent 45%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(45, 138, 110, 0.12), transparent 50%),
+    linear-gradient(165deg, #dfe6eb 0%, #eef2f5 40%, #e4eaee 100%);
+}
+
+/* —— Dark —— */
+[data-theme="dark"] {
+  --ink: #e8eef3;
+  --muted: rgba(232, 238, 243, 0.55);
+  --panel: rgba(28, 33, 40, 0.92);
+  --line: #3a4550;
+  --input: #151a20;
+  --footer: #0d1116;
+  --footer-text: #e8eef3;
+  --page-bg:
+    radial-gradient(ellipse 70% 45% at 15% 0%, rgba(232, 163, 23, 0.12), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(42, 111, 158, 0.14), transparent 45%),
+    linear-gradient(165deg, #12161b 0%, #1a2027 50%, #101418 100%);
+}
+
+/* —— Midnight —— */
+[data-theme="midnight"] {
+  --ink: #dce6f5;
+  --muted: rgba(220, 230, 245, 0.55);
+  --panel: rgba(18, 24, 48, 0.9);
+  --line: #2a3560;
+  --input: #0d1228;
+  --footer: #080c1c;
+  --footer-text: #dce6f5;
+  --page-bg:
+    radial-gradient(ellipse 70% 50% at 20% -5%, rgba(88, 101, 242, 0.28), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 85% 20%, rgba(20, 80, 160, 0.25), transparent 50%),
+    linear-gradient(170deg, #070b18 0%, #101832 45%, #0a1024 100%);
+}
+
+/* —— Neon Blue —— */
+[data-theme="neon"] {
+  --ink: #e6f7ff;
+  --muted: rgba(230, 247, 255, 0.55);
+  --panel: rgba(8, 28, 48, 0.88);
+  --line: #1a6a9a;
+  --input: #041828;
+  --footer: #021018;
+  --footer-text: #7df9ff;
+  --page-bg:
+    radial-gradient(ellipse 65% 45% at 10% 0%, rgba(0, 212, 255, 0.22), transparent 50%),
+    radial-gradient(ellipse 55% 40% at 90% 30%, rgba(0, 120, 255, 0.2), transparent 50%),
+    linear-gradient(165deg, #020b14 0%, #061e30 50%, #031018 100%);
+}
+
+/* —— Aurora —— */
+[data-theme="aurora"] {
+  --ink: #ecf8f4;
+  --muted: rgba(236, 248, 244, 0.55);
+  --panel: rgba(16, 36, 40, 0.88);
+  --line: #2a6a62;
+  --input: #0a1c20;
+  --footer: #061416;
+  --footer-text: #a8ffe8;
+  --page-bg:
+    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(56, 239, 180, 0.22), transparent 55%),
+    radial-gradient(ellipse 60% 45% at 85% 10%, rgba(110, 80, 220, 0.2), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(40, 180, 220, 0.15), transparent 50%),
+    linear-gradient(165deg, #061218 0%, #0f2428 45%, #0a1820 100%);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--page-bg);
+  background-attachment: fixed;
+  transition: color 0.25s ease, background 0.35s ease;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
